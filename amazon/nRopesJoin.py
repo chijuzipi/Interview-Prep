@@ -14,18 +14,33 @@ way is 10 + 13 + 15 = 38.
 
 '''
 
+'''
+--> corner case:
+1) ropes == None or len(ropes) == 0 or len(ropes) == 1
+2) ropes[i] < 0?
+
+--> time: O(n), space: O(n)
+'''
+
 from heapq import heappush, heappop
 
 class Solution(object):
     def join(self, ropes):
+        if ropes == None or len(ropes) == 0 or len(ropes) == 1:
+            return 0
+
         q = []
         for i in ropes:
             heappush(q, i)
 
         cost = 0
         while len(q) > 1:
-            l1 = heap
+            l1 = heappop(q)
+            l2 = heappop(q)
+            cost += l1 + l2
+            heappush(q, l1 + l2)
+        return cost
 
-if __name__ == "__main__"
-    ropes = [4,3,2,6]
+if __name__ == "__main__":
+    ropes = [4,3,2,6,5, 12, 6, 7]
     print Solution().join(ropes)
