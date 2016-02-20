@@ -58,8 +58,8 @@ def scan(nums, i):
     return count
 
 if __name__ == "__main__":
-    nums = [1,1,0,0,1,1,1,0,1,1,0,1]
+    nums = [1,1,0,0,1,1,1,0,1,1,0,1, 1, 1, 1,1, 0, 1, 1, 1, 0, 1, 1]
     print Solution().flipOne(nums)
-    print Solution().flipK(nums, 2)
+    print Solution().flipK(nums, 1)
 
         
