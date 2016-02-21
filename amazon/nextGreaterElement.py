@@ -11,6 +11,10 @@ c) For the input array [4, 5, 2, 25], the next greater elements for each element
 if involve locality of 1-dimensional array, consider stack
 '''
 
+def nextGreater(nums):
+    s = [] 
+    
+
 
 
 
