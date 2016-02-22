@@ -27,7 +27,7 @@ def next(nums):
             out[index[1]] = nums[i]
         s.append((nums[i], i))
     return out
-
+    
 nums = [4,3,2,1]
 print next(nums)
 
