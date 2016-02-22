@@ -10,7 +10,24 @@ c) For the input array [4, 5, 2, 25], the next greater elements for each element
 
 if involve locality of 1-dimensional array, consider stack
 '''
+'''
+--> corner case
+1) nums
+'''
 
+def next(nums):
+    if not nums or len(nums) == 0:
+        return []
+    s = []
+    out = [-1 for x in range(len(nums))]
+    s.append((nums[0], 0))
+    for i in range(len(nums)):
+        while s and nums[i] > s[-1][0]:
+            index = s.pop()
+            out[index[1]] = nums[i]
+        s.append((nums[i], i))
+    return out
 
-
+nums = [4,3,2,1]
+print next(nums)
 
