@@ -13,6 +13,7 @@ if involve locality of 1-dimensional array, consider stack
 '''
 --> corner case
 1) nums
+2) 
 '''
 
 def next(nums):
@@ -28,6 +29,6 @@ def next(nums):
         s.append((nums[i], i))
     return out
     
-nums = [4,3,2,1]
+nums = [1, 2]
 print next(nums)
 
