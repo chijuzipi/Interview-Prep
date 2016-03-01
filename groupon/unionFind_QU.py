@@ -1,6 +1,7 @@
 '''
 Union Union: Quick Union method
-
+time complexity : O(n+m) : n is the total object, m is the number of find or union operation
+space: O(n)
 '''
 from random import randint
 import time
