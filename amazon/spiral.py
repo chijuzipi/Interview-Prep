@@ -5,8 +5,36 @@ spiral order visit of a matrix
 --> corner case:
 1) nums
 2) only one element?
-
 '''
+
+def spiral(nums):
+    if not nums or len(nums) == 0 or len(nums[0]) == 0:
+        return []
+
+    h = len(nums)
+    w = len(nums[0])
+    total = h * w
+    res = []
+    res.append(nums[0][0])
+    i = 0
+    j = 0
+    layer = 0
+    while len(res) < total:
+        while j + 1 < w-layer and len(res) < total:
+            j += 1
+            res.append(nums[i][j])
+        while i + 1 < h-layer and len(res) < total:
+            i += 1
+            res.append(nums[i][j])
+        while j-1 >= layer and len(res) < total:
+            j -= 1 
+            res.append(nums[i][j])
+        while i-1 > layer and len(res) < total:
+            i -= 1
+            res.append(nums[i][j])
+
+        layer += 1
+    return res
 
 def spiral(nums):
     if not nums or len(nums) == 0 or len(nums[0]) == 0:
